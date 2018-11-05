@@ -36,4 +36,28 @@ public class ContactBookController {
         return contactBookService.createContact(contactBook);
     }
 
+    @DeleteMapping("/contact/{id}")
+    public ResponseEntity<?> deleteNote(@PathVariable(value = "id") Long contactId) {
+        ContactBook note = contactRepository.findById(contactId)
+                .orElseThrow(() -> new ResourceNotFoundException("Note", "id", contactId));
+
+        contactRepository.delete(note);
+
+        return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/notes/{id}")
+    public ContactBook updateNote(@PathVariable(value = "id") Long contactId,
+                           @Valid @RequestBody ContactBook contactBook) {
+
+        ContactBook contactBook1 = contactRepository.findById(contactId)
+                .orElseThrow(() -> new ResourceNotFoundException("Note", "id", contactId));
+
+        contactBook1.setName(contactBook.getName());
+        contactBook1.setEmail(contactBook.getEmail());
+
+        ContactBook updatedContact = contactRepository.save(contactBook1);
+        return updatedContact;
+    }
+
 }

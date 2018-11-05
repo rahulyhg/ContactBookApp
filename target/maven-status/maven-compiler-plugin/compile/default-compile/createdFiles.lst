@@ -3,3 +3,4 @@ com/vinayak/contactBookApp/model/ContactBook.class
 com/vinayak/contactBookApp/repository/ContactRepository.class
 com/vinayak/contactBookApp/service/Application.class
 com/vinayak/contactBookApp/controllers/ContactBookController.class
+com/vinayak/contactBookApp/exception/ResourceNotFoundException.class
