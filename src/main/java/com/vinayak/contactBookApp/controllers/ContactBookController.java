@@ -33,7 +33,7 @@ public class ContactBookController {
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ContactBook createNote(@Valid @RequestBody ContactBook contactBook) {
-        return contactBookService.createNote(contactBook);
+        return contactBookService.createContact(contactBook);
     }
 
 }

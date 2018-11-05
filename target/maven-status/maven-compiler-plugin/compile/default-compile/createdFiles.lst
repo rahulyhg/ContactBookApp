@@ -1,7 +1,5 @@
-com/vinayak/contactBookApp/dao/ContactBookDao.class
 com/vinayak/contactBookApp/service/ContactBookService.class
 com/vinayak/contactBookApp/model/ContactBook.class
 com/vinayak/contactBookApp/repository/ContactRepository.class
-com/vinayak/contactBookApp/dao/ContactBookDaoImpl.class
 com/vinayak/contactBookApp/service/Application.class
 com/vinayak/contactBookApp/controllers/ContactBookController.class
